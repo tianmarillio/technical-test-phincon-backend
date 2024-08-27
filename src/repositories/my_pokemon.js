@@ -1,18 +1,18 @@
-const { MyPokemon } = require('../models');
+const { MyPokemon } = require('../models')
 
 class MyPokemonRepository {
   static async create(payload) {
-    const newMyPokemon = await MyPokemon.create(payload);
+    const newMyPokemon = await MyPokemon.create(payload)
 
-    return newMyPokemon.id;
+    return newMyPokemon.id
   }
 
   static async findAll() {
     const myPokemons = await MyPokemon.findAll({
-      order: [['createdAt', 'desc']]
-    });
+      order: [['createdAt', 'desc']],
+    })
 
-    return myPokemons.map((e) => e?.toJSON());
+    return myPokemons.map((e) => e?.toJSON())
   }
 
   static async findById(id) {
@@ -20,9 +20,9 @@ class MyPokemonRepository {
       where: {
         id,
       },
-    });
+    })
 
-    return myPokemon?.toJSON() ?? null;
+    return myPokemon?.toJSON() ?? null
   }
 
   static async update(id, payload) {
@@ -30,9 +30,9 @@ class MyPokemonRepository {
       where: {
         id,
       },
-    });
+    })
 
-    return id;
+    return id
   }
 
   static async delete(id) {
@@ -40,10 +40,10 @@ class MyPokemonRepository {
       where: {
         id,
       },
-    });
+    })
 
-    return id;
+    return id
   }
 }
 
-module.exports = { MyPokemonRepository };
+module.exports = { MyPokemonRepository }

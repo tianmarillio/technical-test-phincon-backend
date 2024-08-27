@@ -1,5 +1,5 @@
 function coinToss() {
-  return Math.random() >= 0.5;
+  return Math.random() >= 0.5
 }
 
-module.exports = { coinToss };
+module.exports = { coinToss }

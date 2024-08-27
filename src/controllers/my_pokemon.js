@@ -12,7 +12,6 @@ class MyPokemonController {
 
   static async createMyPokemon(req, res) {
     const { body } = req
-    // TODO: test validation
     await sanitizeRequest(createMyPokemonDto, body)
     const result = await MyPokemonService.createMyPokemon(body)
 
@@ -36,7 +35,6 @@ class MyPokemonController {
   static async renameMyPokemon(req, res) {
     const { params, body } = req
     const { id } = params
-    // TODO: test validation
     await sanitizeRequest(renameMyPokemonDto, body)
 
     const result = await MyPokemonService.renameMyPokemon(id, body)
