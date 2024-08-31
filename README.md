@@ -1,4 +1,4 @@
-# Technical Test Dansmultipro - Phincon
+# Technical Test Phincon - Backend
 
 ## Setup
 
